@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: vitor
+Build-Jdk: 10
+Main-Class: Main
+Created-By: Maven Integration for Eclipse
+
