@@ -199,12 +199,12 @@ public class ArvoreBinaria<E> {
         }
         ArvoreBinaria<E> resultado = null;
         pilha.push(ultimoVisitado);
-        while(!pilha.isEmpty()) {
+        if(!pilha.isEmpty()) {
             ultimoVisitado = pilha.pop();
             resultado = ultimoVisitado;
-	        if(ultimoVisitado.direita!= null)
+	        while(ultimoVisitado.direita!= null)
 	          	pilha.push(ultimoVisitado.direita);
-		    if(ultimoVisitado.esquerda!= null)
+		    while(ultimoVisitado.esquerda!= null)
 	           	pilha.push(ultimoVisitado.esquerda);
 	        }
         return resultado;        
@@ -223,7 +223,7 @@ public class ArvoreBinaria<E> {
                 ultimoVisitado = ultimoVisitado.esquerda;
             }
             noPos = pilha.peek();
-            if(noPos.direita!=null && ultimoVisitado!=noPos)
+            while(noPos.direita!=null && ultimoVisitado!=noPos)
             	ultimoVisitado=noPos.direita;
             resultado = ultimoVisitado;
             ultimoVisitado=pilha.pop();
